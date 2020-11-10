@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:trabajo_open_data/providers/fiestas_provider.dart';
-import 'package:trabajo_open_data/screens/listaLocalidades_Screen.dart';
+import 'package:opendata/providers/fiestas_provider.dart';
+import 'package:opendata/screens/listaLocalidades_Screen.dart';
 
 class ListaTiposScreen extends StatelessWidget {
   Map<String, Object> args = new Map<String, Object>();
