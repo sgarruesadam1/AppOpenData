@@ -45,7 +45,7 @@ class FiestasProvider {
     return listaLocalidades;
   }
 
-  Future<List<String>> cargarTipos() async {
+  Future<List<String>> cargarTipos(String localidades) async {
     if (listaFiestas.length == 0) {
       await cargarFiestas();
     }
