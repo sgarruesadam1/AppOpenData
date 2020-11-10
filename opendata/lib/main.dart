@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     String tipo = box.read('nombreLocalidad');
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'FIESTAS APP',
+      title: 'Aplicacion de fiestas',
       theme: ThemeData(
         // This is the theme of your application.
         //
