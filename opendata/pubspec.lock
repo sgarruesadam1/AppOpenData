@@ -99,6 +99,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.2.0-nullsafety.1"
+
   ffi:
     dependency: transitive
     description:
@@ -113,6 +114,8 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "5.2.1"
+=======
+
   flutter:
     dependency: "direct main"
     description: flutter
@@ -256,6 +259,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.8.0-nullsafety.1"
+
   path_provider:
     dependency: transitive
     description:
@@ -478,6 +482,7 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0-nullsafety.3"
+<<<<<<< HEAD
   webview_flutter:
     dependency: "direct main"
     description:
@@ -485,6 +490,9 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.7"
+=======
+
+>>>>>>> b3d978af73103a4695a607fde3a07e14159de098
   win32:
     dependency: transitive
     description:
@@ -507,5 +515,11 @@ packages:
     source: hosted
     version: "0.1.2"
 sdks:
+<<<<<<< HEAD
   dart: ">=2.10.2 <2.11.0"
   flutter: ">=1.22.2 <2.0.0"
+=======
+  dart: ">=2.10.0 <2.11.0"
+  flutter: ">=1.12.13+hotfix.5 <2.0.0"
+
+>>>>>>> b3d978af73103a4695a607fde3a07e14159de098
