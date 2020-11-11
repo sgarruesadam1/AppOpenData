@@ -1,25 +1,27 @@
-import 'package:latlong/latlong.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
+import 'package:get/get.dart';
+import 'package:latlong/latlong.dart';
+import 'package:opendata/models/fiesta_model.dart';
+import 'package:opendata/models/fiestas_models.dart';
+import 'package:opendata/screens/listaNombres_screen.dart';
 import 'package:utm/utm.dart';
-import 'package:opendata/providers/fiestas_provider.dart';
 
-class MapaPuntosScreen extends StatefulWidget {
+class MapaScreen extends StatefulWidget {
   final Fiesta fiesta;
 
-  MapaPuntosScreen({@required this.fiesta});
+  MapaScreen({@required this.fiesta});
 
   @override
-  _MapaPuntosScreenState createState() =>
-      _MapaPuntosScreenState(fiesta: fiesta);
+  _MapaScreenState createState() => _MapaScreenState(fiesta: fiesta);
 }
 
-class _MapaPuntosScreenState extends State<MapaPuntosScreen> {
+class _MapaScreenState extends State<MapaScreen> {
   final Fiesta fiesta;
   final map = new MapController();
   var latlon;
-// holiwia
-  _MapaPuntosScreenState({@required this.fiesta}) {
+
+  _MapaScreenState({@required this.fiesta}) {
     latlon = UTM.fromUtm(
       easting: double.parse(fiesta.georrX),
       northing: double.parse(fiesta.georrY),
