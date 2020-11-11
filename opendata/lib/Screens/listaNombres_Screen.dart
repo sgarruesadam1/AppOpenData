@@ -1,30 +1,27 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'package:opendata/providers/fiestas_provider.dart';
-import 'package:opendata/widgets/swiper_widget.dart';
 
-
-class NombresScreen extends StatelessWidget {
-  //final box = GetStorage();
-
+class ListaNombresScreen extends StatelessWidget {
+  Map<String, Object> args = new Map<String, Object>();
+  final box = GetStorage();
   @override
   Widget build(BuildContext context) {
-    //box.write('mancomunidad', null);
-    //box.write('localidad', null);
-    //box.write('tipo', null);
+    args = Get.arguments ?? new Map<String, Object>();
     return Scaffold(
       appBar: AppBar(
-        title: Text("Localidades"),
+        title: Text("Nombres"),
       ),
-      //drawer: MenuWidget(),
+      drawer: DrawerWidget(),
       body: _lista(context),
     );
   }
 
   Widget _lista(BuildContext context) {
     return FutureBuilder(
-      future: fiestasProvider.cargarFiestas(),
+      future: fiestasProvider.cargarNombres(
+          box.read('nombrelocalidad') ?? args['nombrelocalidad'],
+          box.read('tipo') ?? args['tipo']),
       initialData: [],
       builder: (context, snapshot) {
         if (snapshot.connectionState == ConnectionState.done) {
